@@ -1,0 +1,33 @@
+.App {
+  text-align: center;
+  margin: 0;
+  background: #f3f2f9;
+}
+
+.dark {
+  background: #2b2b33;
+  color: white;
+
+  .responsive_nav {
+    background: #2b2b33
+  }
+
+  header button svg, 
+  .navbar-links li a, 
+  .navbar-links li button {
+    color: white;
+  }
+
+
+  .skill-card p {
+    color: #ffffff;
+  }
+
+  .footer {
+    background: #1f1f25;
+
+    .footer-nets svg {
+      color: white;
+    }
+  }
+}

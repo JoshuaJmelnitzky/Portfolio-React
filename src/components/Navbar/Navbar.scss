@@ -1,0 +1,118 @@
+header {
+    position: fixed;
+    height: 82px;
+    padding: 16px 10px;
+    display: flex;
+    width: 100%;
+    z-index: 2;
+    justify-content: flex-end;
+
+    nav {
+        ul {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            padding: 0 60px;
+
+            li {
+                padding-right: 15px;
+                list-style: none;
+
+                a {
+                    text-decoration: none;
+                    padding: 10px 20px;
+                    font-size: 1.1rem;
+                    color: black;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+
+    .nav-btn {
+        padding: 5px;
+        cursor: pointer;
+        background: transparent;
+        border: none;
+        outline: none;
+        color: black;
+        visibility: hidden;
+        opacity: 0;
+        font-size: 1.8rem;
+    }
+}
+
+
+.navbar--button__darkMode {
+    border: none;
+    background: none;
+
+    svg {
+        align-self: center;
+        font-size: 35px;
+    }
+}
+
+@media (max-width: 850px) {
+
+    .navbar--button__darkMode {
+        svg {
+            font-size: 1.7rem;
+        }
+    }
+
+    header {
+        height: 40px;
+        padding: 16px 0;
+
+        .responsive_nav {
+            transform: none;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #f3f2f9;
+            transition: 1s;
+            transform: translateY(-100vh);
+
+            ul {
+                flex-direction: column;
+                gap: 1.5rem;
+
+                .nav-btn-dark {
+                    display: none;
+                }
+
+                li {
+                    padding-right: 0;
+
+                    a {
+                        font-size: 2rem;
+                    }
+                }
+            }
+        }
+
+        .nav-btn {
+            visibility: visible;
+            opacity: 1;
+            padding: 5px;
+            margin-right: 15px;
+            font-size: 1.6rem;
+        }
+
+        .nav-close-btn {
+            position: absolute;
+            top: 2rem;
+            right: 2rem;
+        }
+    }
+}
+

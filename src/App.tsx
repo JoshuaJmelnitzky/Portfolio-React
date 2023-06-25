@@ -1,26 +1,28 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { useState } from 'react';
+import './App.scss';
+import Background from './components/Background/Background';
+import Footer from './components/Footer/Footer';
+import Navbar from './components/Navbar/Navbar';
+import About from './components/About/About';
+import SkillContainer from './components/Skill/SkillContainer';
+import ProjectContainer from './components/Project/ProjectContainer/ProjectContainer';
 
 function App() {
+
+  const [darkMode, setDarkMode] = useState<boolean>(true);
+  let toggleMode = darkMode ? "dark" : "light";
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+  
+    <div className={`App ${toggleMode}`} >
+      <Navbar onToggleMode={() => setDarkMode(!darkMode)}/>
+      <Background toggleDarkMode={`${toggleMode}`} />
+      <About/>
+      <SkillContainer/>
+      <ProjectContainer/>
+      <Footer />
     </div>
   );
-}
+};
 
 export default App;

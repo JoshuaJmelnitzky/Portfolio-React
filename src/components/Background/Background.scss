@@ -1,0 +1,23 @@
+.background-container {
+    height: 70vh;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0 15%;
+    transition: background-image 1.0s ease;
+}
+
+.background-container-light {
+    background-image: url('../../assets/background/dayBackground.jpeg');
+}
+
+.background-container-dark {
+    background-image: url('../../assets/background/nightBackground.jpeg');
+}
+
+
+@media (max-width: 1300px) {
+    .background-container {
+        height: 45vh;
+    }
+}

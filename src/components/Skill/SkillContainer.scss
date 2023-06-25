@@ -1,0 +1,28 @@
+#skillContainer {
+    max-width: 1440px;
+    margin: 0 auto;
+
+    h2 {
+        font-size: 4.5rem;
+        font-family: 'DM Sans', sans-serif;
+        margin-top: 5%;
+    }
+    
+}
+
+.skill {
+    gap: 50px;
+    padding: 20px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-items: center;
+    align-items: center;
+    justify-content: center;
+}
+
+
+@media (max-width: 768px) {
+    #skillContainer h2 {
+        font-size: 2.5rem;
+    }
+}

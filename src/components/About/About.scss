@@ -1,0 +1,114 @@
+.innerin {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+
+.about {
+    display: flex;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 4%;
+    padding-top: 4%;
+
+    .about--description{
+        h2 {
+            font-size: 4.5rem;
+            font-family: 'DM Sans', sans-serif;
+            margin-top: 0;         
+        }
+        
+        p {
+            font-size: 20px;
+        }
+        
+        h3 {
+            font-size: 2.0rem;
+        }
+        
+    }
+
+    div {
+        text-align: start;
+    }
+}
+
+
+.polaroid-card {
+    background-color: #eee6d8;
+    margin: 50px 32px 32px;
+    padding: 0 10px 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0.2);
+    transform: all 0.3s;
+
+    img {
+        width: 220px;
+        height: 250px;
+        object-fit: cover;
+        padding-bottom: 20px;
+    }
+
+    &:nth-of-type(odd) {
+        transform: rotate(6deg);
+
+        &::before {
+            content: '';
+            display: block;
+            background-color: rgba(222, 220, 200, 0.86);
+            width: 105px;
+            height: 25px;
+            transform: translate(155px, 8px) rotate(25deg);
+        }
+    }
+
+    &:hover {
+        transform: scale(1.25);
+    }
+}
+
+
+@media (max-width: 880px) {
+    .about {
+        flex-wrap: wrap;
+        flex-direction: column; 
+
+        .about--description {
+            h2 {
+                font-size: 2.5rem;
+            }
+
+            h3 {
+                font-size: 1.4rem;
+            }
+            
+
+            p {
+                font-size: .9rem;
+            }
+        }
+        
+    }
+
+    .polaroid-card {
+        img{
+            width: 110px;
+            height: 125px;      
+        }
+
+        &:nth-of-type(odd) {
+    
+            &::before {
+                content: '';
+                width: 100px;
+                height: 15px;
+                transform: translate(50px, 8px) rotate(25deg);
+            }
+        }
+    } 
+}
+
+
+
